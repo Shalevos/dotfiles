@@ -112,8 +112,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export PATH=/usr/local/cuda-7.5/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
+
+# Customizations
+PS1='\[\e[0;33m\]\u:\[\e[0;36m\]\w \[\e[1;36m\]$\[\e[0;38m\] '
 new-alias() {
   local last_command=$(echo `history |tail -n2 |head -n1` | sed 's/[0-9]* //')
   echo alias $1="'""$last_command""'" >> ~/.bashrc
