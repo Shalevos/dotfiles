@@ -114,7 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 # Customizations
-PS1='\[\e[0;33m\]\u:\[\e[0;36m\]\w \[\e[1;36m\]$\[\e[0;38m\] '
+PS1='\[\e[0;33m\]\u\[\e[0;36m\]@\[\e[0;32m\]\h:\[\e[0;36m\]\w \[\e[1;36m\]$\[\e[0;38m\] '
 new-alias() {
   local last_command=$(echo `history |tail -n2 |head -n1` | sed 's/[0-9]* //')
   echo alias $1="'""$last_command""'" >> ~/.bashrc
