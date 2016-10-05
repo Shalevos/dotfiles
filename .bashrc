@@ -122,8 +122,5 @@ new-alias() {
 }
 alias rtmux='tmux source ~/.tmux.conf'
 alias na='new-alias'
-alias callgrind='valgrind --tool=callgrind'
 alias gam='git commit -am'
 alias refresh='source ~/.bashrc'
-/usr/games/fortune | /usr/games/cowsay -n
-figlet -f slant Shalevos
